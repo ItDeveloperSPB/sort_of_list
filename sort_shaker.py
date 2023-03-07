@@ -3,7 +3,7 @@ from decorator import decorator_time
 
 
 @decorator_time  # декоратор для замера времени
-def sort_shaker(array: list) -> None:
+def sort_shaker(array: list) -> list:
     """сортировка коктелем"""
     left = 0
     right = len(array) - 1
@@ -16,9 +16,11 @@ def sort_shaker(array: list) -> None:
             if array[i - 1] > array[i]:
                 array[i], array[i - 1] = array[i - 1], array[i]  # делаем перестановку
         left += 1
+    return array
 
 
 list_of_number = [99, 88, 77, 66, 55, 13, 2, 93]  # список объектов для сортировки
-sort_shaker(list_of_number)  # передаем список объектов в метод
-print(list_of_number)  # выводим результат
+response = sort_shaker(list_of_number)  # передаем список объектов в метод
+print(response)  # выводим результат
+
 
