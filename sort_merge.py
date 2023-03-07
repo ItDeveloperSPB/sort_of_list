@@ -1,4 +1,4 @@
-"""Сортировка слияния имеет сложность O(n2)"""
+"""Сортировка слияния имеет сложность O(n * log n)"""
 from decorator import decorator_time
 
 def merge(numbers: list, number_slice: list, ls: int, le: int, rs: int, re: int) -> None:
@@ -33,8 +33,8 @@ def merge_sort(numbers: list) -> None:
             merge(numbers, number_slice, n, n + i - 1, n + i, min(n + 2 * i - 1, count - 1))  # вызыв функции merge
             n += 2 * i  # на каждой итерации увеличиваем n
         i *= 2
-
+    return numbers
 
 list_of_number = [99, 88, 77, 66, 55, 13, 2, 93]  # список объектов для сортировки
-merge_sort(list_of_number)  # передаем список объектов в метод
-print(list_of_number)  # выводим результат
+response = merge_sort(list_of_number)  # передаем список объектов в метод
+print(response)  # выводим результат
