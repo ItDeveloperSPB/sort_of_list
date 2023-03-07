@@ -15,4 +15,4 @@ def sort_selection(numbers) -> list:
 
 list_of_number = [99, 88, 77, 66, 55, 13, 2, 93]  # список объектов для сортировки
 response = sort_selection(list_of_number)  # передаем список объектов в метод
-print(list_of_number)  # выводим результат
+print(response)  # выводим результат
