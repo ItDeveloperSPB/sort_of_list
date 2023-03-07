@@ -23,7 +23,7 @@ def merge(numbers: list, number_slice: list, ls: int, le: int, rs: int, re: int)
 
 
 @decorator_time  # декоратор для замера времени
-def merge_sort(numbers: list) -> None:
+def merge_sort(numbers: list) -> list:
     number_slice = numbers[::]  # получаем срез
     count = len(number_slice)
     i = 1
